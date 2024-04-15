@@ -1,0 +1,286 @@
+
+
+@charset "utf-8";
+/*========= LoadingのためのCSS ===============*/
+
+.name{
+    text-align: center;
+}
+
+body{
+    margin: 0;
+}
+
+
+#load{
+  /*fixedで全面に固定*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background:rgb(83, 104, 94);
+	text-align:center;
+	color:#fff;
+}
+
+#load_logo{
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#load_logo svg{
+  width:300px;
+}
+
+/*=============== SVGアニメーション内の指定 =================*/
+
+/*アニメーション前の指定*/
+#mask path {
+  fill-opacity: 0;/*最初は透過0で見えない状態*/
+  transition: fill-opacity 3s;/*カラーがつく際のアニメーション3秒で変化*/
+  fill: none;/*塗りがない状態*/
+  stroke: #333;/*線の色*/
+}
+
+/*アニメーション後に.doneというクラス名がで付与された時の指定*/
+#mask.done path{
+  fill: #4c4c4c;/*塗りの色*/
+  fill-opacity: 1;/*透過1で見える状態*/
+  stroke: none;/*線の色なし*/
+}
+
+
+
+
+/*=============== トップページのアニメーション設定 =================*/
+
+.slidshow{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.slide-image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    transform: translateY(-50%) translateX(-50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slidshow 58s linear  infinite;
+}
+
+   .slide-image:nth-child(1){
+    background-image: url(../images/h1.jpg);
+    animation-delay: 8s;
+   }
+
+   .slide-image:nth-child(2){
+    background-image: url(../images/h2.jpg);
+    animation-delay: 18s;
+   }
+
+   .slide-image:nth-child(3){
+    background-image: url(../images/h3.jpg);
+    animation-delay: 28s;
+   }
+
+   .slide-image:nth-child(4){
+    background-image: url(../images/h4.jpg);
+    animation-delay: 38s;
+   }
+
+   .slide-image:nth-child(5){
+    background-image: url(../images/h5.jpg);
+    animation-delay: 48s;
+   }
+
+   
+
+
+/* じわっと */
+@keyframes slidshow{
+    0% {
+        opacity: 0;
+        transform: scale(1);
+      }
+      4.16% {
+        opacity: 1;
+      }
+      33.33% {
+        opacity: 1;
+      }
+      41.66% {
+        opacity: 0;
+        transform: scale(1.2);
+      }
+      100% {
+        opacity: 0;
+      }
+}
+
+
+/*=============== スクロールの案内バー =================*/
+.scrolldown2{
+  position:absolute;
+  bottom:10px;
+  left:50%;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span{
+    /*描画位置*/
+  position: absolute;
+  left:10px;
+  bottom:10px;
+    /*テキストの形状*/
+  color: #eee;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom:0;
+    left:-4px;
+    /*丸の形状*/
+  width:10px;
+  height:10px;
+  border-radius: 50%;
+  background:#eee;
+    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+  animation:
+    circlemove 1.6s ease-in-out infinite,
+    cirlemovehide 1.6s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove{
+      0%{bottom:45px;}
+     100%{bottom:-5px;}
+ }
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide{
+      0%{opacity:0}
+     50%{opacity:1;}
+    80%{opacity:0.9;}
+  100%{opacity:0;}
+ }
+
+/* 線の描写 */
+.scrolldown2:after{
+  content:"";
+    /*描画位置*/
+  position: absolute;
+  bottom:0;
+  left:0;
+    /*線の形状*/
+  width:2px;
+  height: 50px;
+  background:#eee;
+}
+
+/*=============== ロゴのフォント設定 =================*/
+
+.home_logo{
+  position: fixed;
+  top: 0;
+}
+
+.home_logo svg{
+  margin-left: 5%;
+  margin-top: 5%;
+  filter:drop-shadow(3px 3px 5px #383737);
+
+  stroke: rgb(65, 187, 147);
+  fill: rgb(37, 37, 37);
+}
+
+
+ ul{
+  display: flex;
+  list-style-type: none;
+  
+ }
+
+ li{
+  margin-left: 30px;
+ }
+ 
+ a{
+  font-size: 16px;
+  color: white;
+ }
+
+
+/*=============== news,concept内の指定 =================*/
+
+.container{
+  position: relative;
+  width: 550px;
+  margin-left: 30%;
+  z-index:1;
+  padding:12px 0;
+  border:1px solid;
+  border-color: rgb(255, 255, 255) transparent transparent transparent ;
+
+}
+
+.a{
+  position: relative;
+  text-align: center;
+}
+
+.a p{
+  font-family:serif;
+  font-size: 18px;
+  color:#ffffff;
+}
+
+.b{
+  position: relative;
+  text-align: center;
+  margin-top: 10px;
+}
+
+p{
+  font-family:serif;
+  font-size: 12px;
+  color:#ffffff;
+}
+
+
+.container span{
+  color: rgb(227, 198, 160);
+}
+
+  
+
+ 
+
+
+
+
+
+
+
+
+
+
+
