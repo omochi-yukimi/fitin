@@ -79,27 +79,27 @@ body{
 }
 
    .slide-image:nth-child(1){
-    background-image: url(../images/h1.jpg);
+    background-image: url(https://omochi-yukimi.github.io/fitin/h1.jpg);
     animation-delay: 8s;
    }
 
    .slide-image:nth-child(2){
-    background-image: url(../images/h2.jpg);
+    background-image: url(https://omochi-yukimi.github.io/fitin/h2.jpg);
     animation-delay: 18s;
    }
 
    .slide-image:nth-child(3){
-    background-image: url(../images/h3.jpg);
+    background-image: url(https://omochi-yukimi.github.io/fitin/h3.jpg);
     animation-delay: 28s;
    }
 
    .slide-image:nth-child(4){
-    background-image: url(../images/h4.jpg);
+    background-image: url(https://omochi-yukimi.github.io/fitin/h4.jpg);
     animation-delay: 38s;
    }
 
    .slide-image:nth-child(5){
-    background-image: url(../images/h5.jpg);
+    background-image: url(https://omochi-yukimi.github.io/fitin/h5.jpg);
     animation-delay: 48s;
    }
 
