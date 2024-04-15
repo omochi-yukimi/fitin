@@ -233,8 +233,8 @@ body{
 
 .container{
   position: relative;
-  width: 550px;
-  margin-left: 30%;
+  width: 600px;
+  margin-left: 25em;
   z-index:1;
   padding:12px 0;
   border:1px solid;
