@@ -229,9 +229,11 @@ body{
  }
 
 @media screen and (max-width:640px){
- 
+ li{
+  margin: 0 3%;
+ }
  a{
-  font-size: 12px;
+  font-size: 10px;
   color: white;
  }
 }
