@@ -146,9 +146,10 @@ body{
   font-size: 0.7rem;
   letter-spacing: 0.05em;
   /*縦書き設定*/
-  -ms-writing-mode: tb-rl;
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
+	-ms-writing-mode: tb-rl;
+	-webkit-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
 }
 
 /* 丸の描写 */
