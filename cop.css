@@ -143,7 +143,7 @@ body{
   bottom:10px;
     /*テキストの形状*/
   color: #eee;
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   letter-spacing: 0.05em;
   /*縦書き設定*/
 	-ms-writing-mode: tb-rl;
