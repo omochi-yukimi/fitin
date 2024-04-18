@@ -140,7 +140,7 @@ body{
     /*描画位置*/
   position: absolute;
   left:10px;
-  bottom:10px;
+  bottom:5px;
     /*テキストの形状*/
   color: #eee;
   font-size: 0.5rem;
